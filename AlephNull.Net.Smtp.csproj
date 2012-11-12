@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73ACEF78-09DC-4D70-9C96-E330AD16481C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AlephNull</RootNamespace>
+    <AssemblyName>AlephNull.Net</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IO\UnmanagedBuffer.cs" />
+    <Compile Include="IO\UnmanagedBufferPool.cs" />
+    <Compile Include="Net\Smtp\DataCommand.cs" />
+    <Compile Include="Net\Smtp\EhloCommand.cs" />
+    <Compile Include="Net\Smtp\HeloCommand.cs" />
+    <Compile Include="Net\Smtp\MailCommand.cs" />
+    <Compile Include="Net\Smtp\NoopCommand.cs" />
+    <Compile Include="Net\Smtp\QuitCommand.cs" />
+    <Compile Include="Net\Smtp\RcptCommand.cs" />
+    <Compile Include="Net\Smtp\RsetCommand.cs" />
+    <Compile Include="Net\Smtp\SmtpCommand.cs" />
+    <Compile Include="Net\Smtp\SmtpEnvelope.cs" />
+    <Compile Include="Net\Smtp\SmtpEventArgs.cs" />
+    <Compile Include="Net\Smtp\SmtpEventHandler.cs" />
+    <Compile Include="Net\Smtp\SmtpServer.cs" />
+    <Compile Include="Net\Smtp\SmtpSession.cs" />
+    <Compile Include="Net\Smtp\SmtpVerb.cs" />
+    <Compile Include="Net\Smtp\StmpMessageReceivedEventHandler.cs" />
+    <Compile Include="Net\TcpServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
