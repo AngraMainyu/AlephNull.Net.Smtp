@@ -12,9 +12,6 @@ A programmable SMTP server written for .NET 4.5.
 
 ###Example 1
 ```cs
-using System;
-using LibPE.PortableExecutable;
-
 using System.Collections.Generic;
 using System.Net;
 using System.Windows.Forms;
